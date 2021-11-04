@@ -7,4 +7,4 @@ type Form = {
   fields: Field[];
 };
 
-export type { Form };
+export type { Form, FieldType };

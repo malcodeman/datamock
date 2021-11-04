@@ -1,7 +1,9 @@
 import { Box } from "@chakra-ui/layout";
 import { useForm, useFieldArray } from "react-hook-form";
 
-import { Form } from "../types";
+import FieldForm from "../components/FieldForm";
+
+import { Form, FieldType } from "../types";
 
 const defaultValues = {
   fields: [
@@ -23,11 +25,20 @@ function Home() {
     name: "fields",
   });
 
+  function handleOnSubmit(data: { name: string; type: FieldType }) {
+    fieldArray.append({ name: data.name, type: data.type });
+  }
+
   return (
     <Box>
       {fieldArray.fields.map((item) => {
-        return <Box key={item.id}>{item.name}</Box>;
+        return (
+          <Box key={item.id}>
+            {item.name} - {item.type}
+          </Box>
+        );
       })}
+      <FieldForm onSubmit={handleOnSubmit} />
     </Box>
   );
 }
