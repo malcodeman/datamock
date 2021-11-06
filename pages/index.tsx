@@ -15,6 +15,10 @@ const defaultValues = {
       name: "lastName",
       type: "lastName" as const,
     },
+    {
+      name: "jobTitle",
+      type: "jobTitle" as const,
+    },
   ],
 };
 

@@ -1,4 +1,4 @@
-type FieldType = "firstName" | "lastName";
+type FieldType = "firstName" | "lastName" | "jobTitle";
 type Field = {
   name: string;
   type: FieldType;

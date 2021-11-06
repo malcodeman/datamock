@@ -35,6 +35,7 @@ function FieldForm(props: props) {
       <Select placeholder="Select option" {...form.register("type")} mr="2">
         <option value="firstName">First name</option>
         <option value="lastName">Last name</option>
+        <option value="jobTitle">Job title</option>
       </Select>
       <Button type="submit">Add</Button>
     </Flex>
